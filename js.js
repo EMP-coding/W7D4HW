@@ -137,3 +137,37 @@ printMovieInfo2('ET')                                  // Returns *Warning* ET c
 // Add a Button somewhere on your index.html page with an id "backgroundChanger"
 // Add a click event listener to your button that will change the background color of the body
 // The background should toggle between at least 2 colors
+
+
+let isColorOne = true; 
+
+const button = document.getElementById('backgroundChanger');
+function changeBackgroundColor() {
+    if (isColorOne) {
+        document.body.style.backgroundColor = 'skyblue'; 
+    } else {
+        document.body.style.backgroundColor = 'salmon'; 
+    }
+    isColorOne = !isColorOne; 
+}
+button.addEventListener('click', changeBackgroundColor);
+
+
+
+
+/* From todays example
+let colorButtons = document.getElementsByClassName('light-dark-button');
+console.log(colorButtons);
+for (let btn of colorButtons){
+    btn.addEventListener('click', changeBackgroundColor);
+}
+
+function changeBackgroundColor(e){
+    console.log('Color button clicked');
+    console.log(e.target.value);
+    if (e.target.value === 'Dark'){
+        document.body.style.backgroundColor = '#C96E12'
+    } else {
+        document.body.style.backgroundColor = '#C96E12'
+    }
+} */
